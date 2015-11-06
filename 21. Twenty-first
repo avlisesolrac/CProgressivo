@@ -1,0 +1,15 @@
+# include <stdio.h>
+
+int main (void){
+	int num, num2, sub;
+	
+	printf("Press first and second number: ");
+	scanf("%i %i", &num, &num2);
+	
+	sub = num - num2;
+	
+	printf("%i - %i = %i\n\n", num, num2, sub);
+	
+	getchar();
+	return 0;
+}
