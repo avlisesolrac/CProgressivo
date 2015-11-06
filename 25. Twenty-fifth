@@ -1,0 +1,13 @@
+# include <stdio.h>
+
+int main (void) {
+	char letra;
+	
+	printf("Digite um caractere: ");
+	letra = getchar();
+	
+	printf("Voce digitou: '%c'\n", letra);
+	
+	getchar();
+	return 0;
+}
