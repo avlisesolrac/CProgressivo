@@ -1,0 +1,18 @@
+# include <stdio.h>
+
+int main (void){
+	int num, num2, sum;
+	
+	printf("Press first number: ");
+	scanf("%i", &num);
+	
+	printf("Press second number: ");
+	scanf("%i", &num2);
+	
+	sum = num + num2;
+	
+	printf("%i + %i = %i\n\n", num, num2, sum);
+	
+	getchar();
+	return 0;
+}
