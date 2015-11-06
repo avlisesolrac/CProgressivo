@@ -1,0 +1,9 @@
+# include <stdio.h>
+
+int main (void) {
+    
+    printf("Eu nasci no ano %d, no dia %d do mes %d\n", 1993, 18, 9);
+    
+    getchar();
+    return 0;
+}
