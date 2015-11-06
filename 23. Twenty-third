@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    double num1, num2, div;
+    
+    printf("Digite um numero: ");
+    scanf("%lf", &num1);
+
+    printf("Digite outro numero: ");
+    scanf("%lf", &num2);
+
+    div = num1 / num2;
+
+    printf("%.1f / %.1f = %.3f", num1,num2,div);
+    
+    getchar();
+    return 0;
+}
