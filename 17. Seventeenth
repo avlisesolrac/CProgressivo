@@ -1,0 +1,10 @@
+# include <stdio.h>
+
+int main (void) {
+	//Escrita do meu nome de acordo com os valores da tabela ASCII.
+	
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 97, 118, 108, 105, 83, 32, 69, 32, 115, 111, 108, 114, 97, 67);
+	
+	getchar();
+	return 0;
+}
