@@ -1,0 +1,19 @@
+# include <stdio.h>
+
+int main (void) {
+	char letra, letra2;
+	
+	printf("Insira um caractere: ");
+	letra = fgetc(stdin);
+	
+	//Função para liberar espaço no 'stdin'
+	fflush(stdin);
+	
+	printf("Insira outro caractere: ");
+	letra2 = fgetc(stdin);
+	
+	printf("Voce digitou: '%c' e '%c'\n", letra, letra2);
+	
+	getchar();
+	return 0;
+}
