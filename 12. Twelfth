@@ -1,7 +1,9 @@
 # include <stdio.h>
 
 int main (void){
-	printf("O tamanho do inteiro em meu computador: %d bytes", sizeof(int));
+	printf("int: %d bytes\n", sizeof(int));
+	printf("short int: %d bytes\n", sizeof(short));
+	printf("long int: %d bytes\n\n", sizeof(long));
 	
 	getchar();
 	return 0;
