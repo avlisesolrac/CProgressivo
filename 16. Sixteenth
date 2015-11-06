@@ -1,0 +1,13 @@
+# include <stdio.h>
+
+int main (void){
+	
+	char ltr0 = 'C', ltr1 = ' ', ltr2 = 'P', ltr3 = 'r', ltr4 = 'o', ltr5 = 'g', ltr6 = 'e',
+	 ltr7 = 's', ltr8 = 'i', ltr9 = 'v', ltr10 = '\n';
+	 
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c", ltr0, ltr1, ltr2, ltr3, ltr4, ltr5, ltr3, ltr6
+	, ltr7, ltr7, ltr8, ltr9, ltr4, ltr10);
+	
+	getchar();
+	return 0;
+}
