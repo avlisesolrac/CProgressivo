@@ -1,0 +1,9 @@
+# include <stdio.h>
+
+int main (void) {
+    
+    printf("Eu tenho %d anos", 18);
+    
+    getchar();
+    return 0;
+}
