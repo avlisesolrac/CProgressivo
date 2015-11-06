@@ -9,6 +9,10 @@ int main (void) {
 	//Função para limpar o buffer no 'stdin'
 	fflush(stdin);
 	
+	/* Caso queira limpar o buffer no Linux utilize:
+	__fpurge(stdin);
+	*/
+	
 	printf("Insira outro caractere: ");
 	letra2 = fgetc(stdin);
 	
