@@ -6,7 +6,7 @@ int main (void) {
 	printf("Insira um caractere: ");
 	letra = fgetc(stdin);
 	
-	//Função para liberar espaço no 'stdin'
+	//Função para limpar o buffer no 'stdin'
 	fflush(stdin);
 	
 	printf("Insira outro caractere: ");
