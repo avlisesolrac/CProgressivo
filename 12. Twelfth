@@ -1,0 +1,8 @@
+# include <stdio.h>
+
+int main (void){
+	printf("O tamanho do inteiro em meu computador: %d bytes", sizeof(int));
+	
+	getchar();
+	return 0;
+}
