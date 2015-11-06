@@ -1,0 +1,11 @@
+# include <stdio.h>
+
+int main (void){
+	
+	int cProgressivo;
+	
+	printf("O Valor da variavel 'cProgresivo' eh %d", cProgressivo);
+	
+	getchar();
+	return 0;
+}
