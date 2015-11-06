@@ -1,0 +1,13 @@
+# include <stdio.h>
+
+int main (void){
+	int num, num2;
+	
+	printf("Press first and second number: ");
+	scanf("%i %i", &num, &num2);
+	
+	printf("Voce digitou %i e %i\n\n", num, num2);
+	
+	getchar();
+	return 0;
+}
