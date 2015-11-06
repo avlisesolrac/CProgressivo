@@ -1,0 +1,18 @@
+# include <stdio.h>
+
+int main ()
+{
+	int soma = 1 + 1;
+	printf("1 + 1 = %i\n", soma);
+	
+	int numero = 10;
+	int numero2 = 20;
+	
+	soma = numero + numero2;
+	printf("%i + %i = %i\n", numero, numero2, soma);
+	
+	printf("%d - %d = %d\n", soma, numero, soma-numero);
+	
+	getchar();
+	return 0;
+}
