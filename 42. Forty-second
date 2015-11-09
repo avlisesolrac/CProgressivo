@@ -1,0 +1,18 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int main (void) {
+	int num, fat = 1;
+	
+	printf("Digite um inteiro-> ");
+	scanf("%i", &num);
+	
+	for(int n = num; n >= 1; --n){
+		fat *= n;
+	}
+	
+	printf("\nO fatorial resultou em: %i\n\n", fat);
+	
+	system("pause");
+	return 0;
+}
