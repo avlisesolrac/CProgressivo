@@ -1,0 +1,23 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int main (void) {
+	
+	int qtd, pares = 1, impares = 1;
+	
+	printf("Digite um numero qualquer: ");
+	scanf("%i", &qtd);
+	
+	for(int i = 1; i <= qtd; ++i){
+		if(i % 2 == 0)
+			pares *= i;
+		else
+			impares *= i;
+	}
+	
+	printf("\nO produto dos numeros pares resultou em: %i\n", pares);
+	printf("\nO produto dos numeros impares resultou em: %i\n\n", impares);
+	
+	system("pause");
+	return 0;
+}
