@@ -1,0 +1,19 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int main (void) {
+	int num;
+	
+	printf("Digite um inteiro: ");
+	scanf("%i", &num);
+	
+	for(int line = 1; line <= num; ++line) {
+		for(int coluna = 1; coluna <= line; ++coluna) {
+			printf("%i ", line*coluna);
+		}
+		printf("\n");
+	}
+
+	system("pause");
+	return 0;
+}
