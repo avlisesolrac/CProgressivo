@@ -1,0 +1,25 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int main (void) {
+	float depInicial, invMensal, montante, lucro;
+	int meses;
+	
+	printf("Digite o valor do deposito inicial> ");
+	scanf("%f", &depInicial);
+	
+	printf("Digite o valor do investimento mensal> ");
+	scanf("%f", &invMensal);
+	
+	printf("Durante quanto tempo> ");
+	scanf("%i", &meses);
+	
+	lucro = (invMensal*meses)*(0.5/100);
+	
+	montante = depInicial + lucro + invMensal*meses;
+	
+	printf("\nO lucro obtido foi de R$ %.2f e o total acumulado foi de R$%.2f\n\n", lucro, montante);
+	
+	system("pause");
+	return 0;
+}
