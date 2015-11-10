@@ -1,0 +1,14 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+void hello (){
+     printf("Ola mundo! Estou aprendendo c com o curso C Progressivo!\n\n");
+}
+
+int main (void) {
+    
+    hello ();
+    
+    system("pause");
+    return 0;
+}
