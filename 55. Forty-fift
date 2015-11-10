@@ -1,0 +1,19 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+void teste (int a){
+	++a;
+	printf("Estou dentro da funcao! A variavel foi alterada, e aqui dentro vale: a %i\n\n", a);
+}
+
+int main (void) {
+	int num = 1;
+	
+	printf("Valor inicial de 'num': %i\n\n", num);
+	teste(num);
+	
+	printf("Valor de 'num' apos ir pra funcao: %i\n\n\n", num);
+	
+	system("pause");
+	return 0;
+}
