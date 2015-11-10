@@ -1,0 +1,23 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int multi (int a, int b){
+    return a * b;
+}
+
+int main (void) {
+    int num, num2;
+    
+    printf("#####\tPrograma que multiplica dois numeros\t#####\n\n");
+    
+    printf("Digite o primeiro numero -> ");
+    scanf("%i", &num);
+    
+    printf("\nDigite o segundo numero -> ");
+    scanf("%i", &num2);
+    
+    printf("\nA multiplicacao resultou em -> %i.\n\n", multi(num, num2));
+    
+    system("pause");
+    return 0;
+}
