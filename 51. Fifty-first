@@ -1,0 +1,54 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+void oi (){
+     printf("Oi meu caro!\n\n");
+}
+
+void tudoBem (){
+     printf("Tudo bem e com voce?\n\n");
+}
+
+
+void familia (){
+     printf("Meus bits, ahhh! Oops minha familia vai bem\n\n");
+}
+
+void sair (){
+     printf("Saia nao, vai! Fique mais um pouco, please!\n\n");
+}
+
+
+void warning (){
+     printf("Ta ficando louco! Voce deveria ter escolhido as opcoes que mostrei!\n\n");
+}
+
+int main (void) {
+    int continuar = 1;
+    
+        printf("\tBate-papo Forever Alone!\n"
+               "Escolha algumas das opcoes abaixo\n");
+    do{
+        printf("1. Oi\n"
+               "2. Tudo bem\n"
+               "3. Como vai a familia\n"
+               "0. Sair\n");
+        
+        scanf("%i", &continuar);
+        system("cls || clear");
+        
+        switch(continuar){
+           case 1 : oi(); break;
+           case 2 : tudoBem(); break;
+           case 3 : familia(); break;
+           case 0 : sair(); break;
+           default : warning(); break;
+        } 
+    }while (continuar);
+        
+    printf("\nCongratulations tu youre family!\n\n");
+    
+    
+    system("pause");
+    return 0;
+}
