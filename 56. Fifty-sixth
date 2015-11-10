@@ -1,0 +1,15 @@
+# include <stdio.h>
+# include <stdlib.h>
+# include <time.h>
+
+int main (void) {
+	printf("Intervalo da rand: [0,%i]\n", RAND_MAX);
+	srand((unsigned)time(NULL));
+	
+	for(int i = 1; i <= 10; ++i){
+		printf("Numero %i: %i\n", i, rand());
+	}
+	
+	system("pause");
+	return 0;
+}
