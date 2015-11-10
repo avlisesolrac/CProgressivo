@@ -1,0 +1,79 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+void menu(){
+     printf("\tCalculadora do Curso de C Progressivo\n\n");
+     
+     printf("Operacoes disponiveis\n");
+     printf("%c %c soma\n", '+', ':');
+     printf("%c %c subtracao\n", '-', ':');
+     printf("%c %c multiplicacao\n", '*', ':');
+     printf("%c %c divisao\n", '/', ':');
+     printf("%c %c resto da divisao\n", '%', ':');
+     
+     printf("\nDigite a expressao na forma: numero1 operador numero2\n");
+     printf("Exemplos: 1 + 1, 2.1 * 3.1\n");
+     printf("Para sair digite respectivamente 0 0 0\n");
+}
+
+void soma (float a, float b) {
+     printf("%.2f\n\n", a + b);
+}
+
+void subtracao (float a, float b) {
+     printf("%.2f\n\n", a - b);
+}
+
+void multiplicacao (float a, float b) {
+     printf("%.2f\n\n", a * b);
+}
+
+void divisao (float a, float b) {
+     
+     if (b == 0)
+        printf("Jamais dividiras por Zero!\n\n");
+     else
+         printf("%.2f\n\n", a / b);
+}
+
+void modulo (float a, float b) {
+     printf("%.2f\n\n", a + b);
+}
+
+void calculadora (float a, char operador, float b){
+     system("cls || clear");
+     
+     printf("Calculando: %.2f %c %.2f = ", a, operador, b);
+     
+     switch(operador){
+        case '+' : soma(a, b); break;
+        case '-' : subtracao(a, b); break;
+        case '*' : multiplicacao(a, b); break;
+        case '/' : divisao(a, b); break;
+        case '%' : modulo(a, b); break;
+        default :
+                if(operador != '0')
+                     printf("Operador Invalido\n\n");
+                else
+                    printf("\n\nFechando a calculadora\n\n");
+                    
+     }
+}
+
+int main (void) {
+    float num, num2;
+    char oper;
+    
+    do{
+       menu();
+       scanf("%f", &num);
+       scanf("%c", &oper);
+       scanf("%f", &num2);
+       
+       calculadora(num, oper, num2);
+       
+    } while (num != 0 && oper != '0' && num2 != 0);
+    
+    system("pause");
+    return 0;
+}
