@@ -1,0 +1,10 @@
+/*
+1. Crie uma função que receba um valor e diga se é nulo ou não.
+*/
+
+void nuloYesNo (float numNulo){
+     if(numNulo == 0)
+        printf("O numero %.2f eh nulo!\n");
+     else
+        printf("O numero %.2f nao eh nulo!\n");
+}
