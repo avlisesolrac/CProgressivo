@@ -1,0 +1,10 @@
+/*7. Crie uma função em linguagem C que receba 3 números e retorne o menor
+valor, use a função da questão 5.*/
+
+float maiorEntre3(float a, float b, float c){
+      
+      if(menorEntre(a, b) <= c)
+         return menorEntre(a, b);
+      else
+          return c;
+}
