@@ -1,0 +1,42 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+void conversao(char choice);
+
+int main (void) {
+    char choiceUser;
+    
+    printf("Programa para conversao: \n\nTemperaturas Celsius <=> Farenheit ");
+    printf("\n\n1. Celsius para Farenheit");
+    printf("\n2. Farenheit para Celsius\nEscolha: ");
+    scanf("%c", &choiceUser);
+    system("cls || clear");
+    
+    conversao(choiceUser);
+    
+    printf("\n\n");
+    
+    system("pause");
+    return 0;
+}
+
+void conversao(char choice){
+     float c, f;
+     
+     switch(choice){
+                       
+       case '1' : printf("OK! De Celsius para Farenheit: ");
+                  printf("\nQual o valor da temperatura em graus C -> ");
+                  scanf("%f", &c);
+                  f = (9*c/5) + 32; 
+                  printf("\nO resultado da conversao eh: %.2f", f); break;
+                  
+       case '2' : printf("OK! De Farenheit para Celsius: ");
+                  printf("\nQual o valor da temperatura em  graus F -> ");
+                  scanf("%f", &f);
+                  c = 5*(f-32)/9;
+                  printf("\nO resultado da conversao eh: %.2f", c); break;
+                  
+       default : printf("Voce digitou uma opcao invalida!"); break;
+    }
+}
