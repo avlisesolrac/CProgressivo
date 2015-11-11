@@ -1,0 +1,10 @@
+/*
+0. Crie uma função que receba um valor e informe se ele é positivo ou não.
+*/
+
+void positivoYesNo(float number){
+     if(num > 0){
+        printf("O numero %.2f eh positivo!\n");
+     else
+        printf("O numero %.2f eh negativo!\n");
+}
