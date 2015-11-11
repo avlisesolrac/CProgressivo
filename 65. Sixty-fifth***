@@ -1,0 +1,67 @@
+/*
+3. Usando as 3 funções acima, crie um aplicativo que calcula as raízes de uma
+equação do 2o grau: ax² + bx + c=0
+Para ela existir, o coeficiente 'a' deve ser diferente de zero. Caso o delta
+seja maior ou igual a zero, as raízes serão reais. Caso o delta seja negativo,
+as reais serão complexas e da forma: x + iy
+*/
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <math.h>
+
+int calculoDelta(int a, int b, int c);
+float nulo (float numNulo);
+int negativo(int number);
+
+int main (void) {
+    int coeA, coeB, coeC, delta;
+    float xUm, xDois;
+    
+    printf("Programa para calcular uma equacao de grau 2:\n\n");
+    printf("Digite o coeficiente a:");
+    scanf("%i", &coeA);
+    
+    printf("Digite o coeficiente b:");
+    scanf("%i", &coeB);
+    
+    printf("Digite o coeficiente c:");
+    scanf("%i", &coeC);
+    
+    delta = calculoDelta(coeA, coeB, coeC);
+    
+    xUm = (-(coeB) + sqrt(delta)) / 2 * coeA;
+    xDois = (-(coeB) - sqrt(delta)) / 2 * coeA;
+    
+    if(nulo(coeA)){
+       printf("\n\nA equacao nao existe pois o coeficiente a eh zero!\n\n");
+    } else if(negativo(delta)){
+       printf("\n\nO delta eh negativo, entao as raizes serao complexas!\n\n");
+    } else if(nulo(delta)){
+       printf("\n\nO delta eh nulo, entao ha apenas uma raiz!\n"
+                 "O resultado de x1 = %.2f\n\n", xUm);
+    } else {
+       printf("\n\nOs resultados sao x1 = %.2f e x2 = %.2f.\n\n", xUm, xDois);
+    }
+    
+    system("pause");
+    return 0;
+}
+
+int calculoDelta(int a, int b, int c){
+    return (b*b) - (4 * a * c);
+}
+
+float nulo(float numNulo){
+     if(numNulo == 0)
+        return 1;
+     else
+        return 0;
+}
+
+int negativo(int number){
+     if(number < 0)
+        return 1;
+     else
+        return 0;
+}
