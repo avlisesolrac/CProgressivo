@@ -1,0 +1,8 @@
+int Dado(void){
+    //Colocar na função main para gerar numeros aleatorios, senão os numeros irão se repetir.
+    srand((unsigned)time(NULL));
+    
+    int sorteio = 1 + (rand() % 6);
+    
+    return sorteio;
+}
