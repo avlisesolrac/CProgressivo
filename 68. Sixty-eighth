@@ -1,0 +1,10 @@
+/*6. Crie uma função em linguagem C que receba 3 números e retorne o maior
+valor, use a função da questão 4.*/
+
+float maiorEntre3(float a, float b, float c){
+      
+      if(maiorEntre(a, b) >= c)
+         return maiorEntre(a, b);
+      else
+          return c;
+}
