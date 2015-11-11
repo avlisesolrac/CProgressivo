@@ -1,0 +1,8 @@
+// 5. Crie uma função em linguagem C que receba 2 números e retorne o menor valor.
+
+float menorEntre(float num, float num2){
+      if(num <= num2)
+         return num;
+      else
+          return num2;
+}
