@@ -1,0 +1,54 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int main (void) {
+	
+	int num = 7, metade = num/2, cima = metade, impar = 1, imparBaixo;
+	
+	// Parte superior do diamante.
+	
+	for(int i = 1; i <= cima; ++i){
+		for(int j = 1; j <= metade; ++j){
+			printf(" ");
+		}
+		for(int aste = 1; aste <= impar; ++aste){
+			printf("*");
+		}
+		impar += 2;
+		imparBaixo = impar;
+		printf("\n");
+		--metade;
+	}
+	
+	// Linha horizontal do diamante, no centro.
+	
+	for( ; num >= 1; --num){
+		printf("*");
+	}
+	
+	printf("\n");
+	
+	// Parte inferior do diamante.
+	imparBaixo -= 2;
+	impar = 1;
+	metade = num/2;
+	//cima = metade;
+	for(int i = 1; i <= cima; ++i){
+		for(int j = 1; j <= metade; ++j){
+			printf(" ");
+		}
+		
+		for(int aste = 1; aste <= imparBaixo; ++aste){
+			printf("*");
+		}
+
+		imparBaixo -= 2;
+		printf("\n");
+		--metade;
+	}
+	
+	printf("\n\n");
+	
+	system("pause");
+	return 0;
+}
