@@ -1,0 +1,56 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int const SIZE = 10;
+int menor = 0, maior = 0, index, index2;
+
+void insert(int array[]);
+void indiqueMaior(int array[]);
+void exibir(int array[]);
+
+int main (void) {
+	
+	int numbers[SIZE];
+	
+	insert(numbers);
+	indiqueMaior(numbers);
+	exibir(numbers);
+	
+	printf("\n\n");
+	
+	system("pause");
+	return 0;
+}
+
+void insert(int array[]){
+	
+	for(int column = 0; column < SIZE; ++column){
+		printf("Press %i number ->", column+1);
+		scanf("%i", &array[column]);
+		system("cls || clear");
+	}
+}
+
+void indiqueMaior(int array[]){
+		menor = array[0], maior = array[0];
+	for(int column = 0; column < SIZE; ++column){
+		if(array[column] <= menor){
+			menor = array[column];
+			index = column;
+		}
+		if(array[column] >= maior){
+			maior = array[column];
+			index2 = column;
+		}
+		
+	}
+	printf("\nO menor numero digitado esta no indice %i e o seu valor respectivo: %i\n", index+1, menor);
+	printf("O maior numero digitado esta no indice %i e o seu valor respectivo: %i\n", index2+1, maior);
+}
+
+void exibir(int array[]){
+
+	for(int column = 0; column < SIZE; ++column){
+		printf("[%i] -> %i\n", column+1, array[column]);
+	}
+}
