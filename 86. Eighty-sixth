@@ -1,0 +1,55 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int const SIZE = 10;
+
+int coletaRazao();
+int coletaInicial();
+void geraPG(int vetPG[], int razao, int valorInicial);
+void exibir(int vet[]);
+
+int main (void) {
+
+	int progGeometrica[SIZE], inicial = coletaInicial(), razao = coletaRazao();
+	
+	geraPG(progGeometrica, razao, inicial);
+	exibir(progGeometrica);
+	
+	printf("\n\n");
+	
+	system("pause");
+	return 0;
+}
+
+int coletaRazao(){
+	int num;
+	
+	printf("Digite um valor para a razao da P.G. -> ");
+	scanf("%i", &num);
+	
+	return num;
+}
+
+int coletaInicial(){
+	int num;
+	
+	printf("Digite um valor inicial para a P.G. -> ");
+	scanf("%i", &num);
+	
+	return num;
+}
+
+void geraPG(int vetPG[], int razao, int valorInicial){
+	
+	vetPG[0] = valorInicial;
+	for(int column = 1; column < SIZE; ++column){
+		vetPG[column] = vetPG[column-1]*razao;
+	}
+}
+
+void exibir(int vet[]){
+	
+	for(int column = 0; column < SIZE; ++column){
+		printf("[%3i] ", vet[column]);
+	}
+}
