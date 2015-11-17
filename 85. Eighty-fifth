@@ -1,0 +1,55 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int const SIZE = 10;
+
+int coletaRazao();
+int coletaInicial();
+void geraPA(int vetPA[], int razao, int valorInicial);
+void exibir(int vet[]);
+
+int main (void) {
+	
+	int progAritmetica[SIZE];
+	
+	geraPA(progAritmetica, coletaRazao(), coletaInicial());
+	exibir(progAritmetica);
+	
+	printf("\n\n");
+	
+	system("pause");
+	return 0;
+}
+
+int coletaRazao(){
+	int num;
+	
+	printf("Digite um valor para a razao da P.A. -> ");
+	scanf("%i", &num);
+	
+	return num;
+}
+
+int coletaInicial(){
+	int num;
+	
+	printf("Digite um valor inicial para a P.A. -> ");
+	scanf("%i", &num);
+	
+	return num;
+}
+
+void geraPA(int vetPA[], int razao, int valorInicial){
+	
+	vetPA[0] = valorInicial;
+	for(int column = 1; column < SIZE; ++column){
+		vetPA[column] = vetPA[column-1]+razao;
+	}
+}
+
+void exibir(int vet[]){
+	
+	for(int column = 0; column < SIZE; ++column){
+		printf("[%3i] ", vet[column]);
+	}
+}
