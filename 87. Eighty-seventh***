@@ -1,0 +1,86 @@
+# include <stdio.h>
+# include <stdlib.h>
+
+int const SIZE = 3;
+
+void mostraTabuleiro(char tab[][SIZE]);
+void collectUser();
+void alterTabuleiro(int lineUser, int columnUser, char option);
+
+int main (void) {
+   
+   char tabuleiro[SIZE][SIZE];
+   
+   printf("\n\tJOGO DA VELHA :D\n");
+   
+   mostraTabuleiro(tabuleiro);
+   collectUser();
+   
+   printf("\n\n");
+   system("pause");
+   return 0;
+}
+
+void mostraTabuleiro(char tab[][SIZE]){
+     printf("\n");
+     for(int line = 0; line < SIZE; ++line){
+        if(line == 0){
+           printf("  %i\t", line+1);
+        } else {
+         printf(" %i\t", line+1);
+        }
+      }
+      printf("\n");
+     for(int line = 0; line < SIZE; ++line){
+        printf("%i", line+1);
+        for(int column = 0; column < SIZE; ++column){
+           printf("[%1c]\t", tab[line][column] = ' ');
+      }
+   printf("\n");
+   }
+}
+
+void collectUser(){
+   int line, column, contLine = 0, contColumn = 0;
+   char option;
+   
+   do{
+       
+   printf("\nDigite o numero da linha -> ");
+   scanf("%i", &line);
+   
+   printf("\nDigite o numero da coluna -> ");
+   scanf("%i", &column);
+   
+   printf("\nQual OPCAO: X(Xiz) OU O(Bolinha) -> ");
+   scanf("%c", &option);
+   
+   system("cls || clear");
+   
+   alterTabuleiro(line, column, option);
+   
+   }while(contLine < SIZE && contColumn < SIZE);
+}
+
+void alterTabuleiro(int lineUser, int columnUser, char option){
+     char tabuleiro[SIZE][SIZE];
+     printf("\n");
+     for(int line = 0; line < SIZE; ++line){
+        if(line == 0){
+           printf("  %i\t", line+1);
+        } else {
+         printf(" %i\t", line+1);
+        }
+      }
+      printf("\n");
+     for(int line = 0; line < SIZE; ++line){
+        printf("%i", line+1);
+        for(int column = 0; column < SIZE; ++column){
+                if(line == lineUser && column == columnUser){
+                  tabuleiro[line][column] = option;
+                  printf("[%1c]\t", tabuleiro[line][column]);
+                }
+      }
+   printf("\n");
+   }
+}
